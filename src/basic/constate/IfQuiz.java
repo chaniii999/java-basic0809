@@ -1,7 +1,6 @@
 package basic.constate;
 
-import javax.lang.model.SourceVersion;
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class IfQuiz {
