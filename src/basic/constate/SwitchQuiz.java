@@ -37,6 +37,7 @@ public class SwitchQuiz {
                 break;
             default:
                 System.out.println("잘못된 입력.");
+                flag = true;
                 break;
         }
         if (!flag)
