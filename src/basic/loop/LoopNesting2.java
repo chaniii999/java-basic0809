@@ -1,4 +1,4 @@
-package basic.constate;
+package basic.loop;
 
 public class LoopNesting2 {
     public static void main(String[] args) {
