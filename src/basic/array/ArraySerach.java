@@ -1,6 +1,6 @@
 package basic.array;
 
-import javax.swing.table.TableRowSorter;
+
 import java.util.Scanner;
 
 public class ArraySerach {
