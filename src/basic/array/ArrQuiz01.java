@@ -1,5 +1,8 @@
 package basic.array;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class ArrQuiz01 {
     public static void main(String[] args) {
 
@@ -13,5 +16,30 @@ public class ArrQuiz01 {
             4. 기존의 음식데이터를 증가된 새 배열에 복사한다.
             5. 새로운 음식명을 마지막 위치에 추가한다.
          */
+        Scanner sc = new Scanner(System.in);
+        String[] foods = new String[1];
+
+        System.out.println("음식명을 입력하세요.");
+        foods[0] = sc.next();
+
+        while (true) {
+            System.out.println("--- 현재리스트 ---");
+            System.out.println(Arrays.toString(foods));
+            System.out.println("음식명을 입력하세요.");
+            String input = sc.next();
+            if (input.equals("그만")) {
+                System.out.println("종료합니다.");
+                System.out.println("--- 현재리스트 ---");
+                System.out.println(Arrays.toString(foods));
+                break;
+            }
+            String[] temp = new String[foods.length+1];
+            for (int i = 0; i < foods.length; i++) {
+                temp[i] = foods[i];
+            }
+            temp[temp.length-1] = input;
+            foods = temp;
+            temp =null;
+        }
     }
 }
