@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ArrQuiz02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String[] kakao = {"무지","네오","어피치","춘식","라이언"};
+        String[] kakao = {"무지", "네오", "어피치", "춘식", "라이언"};
         /*
          1. 삭제할 친구를 입력받아서 삭제를 진행해 주세요.
 
@@ -20,16 +20,22 @@ public class ArrQuiz02 {
             System.out.println("삭제할 친구를 고르세요.");
             System.out.println(Arrays.toString(kakao));
             String tg = sc.next();
-            String[] temp = new String[kakao.length-1];
+            String[] temp = new String[kakao.length - 1];
+            boolean flag = false;
             int tgIdx = 0;
             for (int i = 0; i < temp.length; i++) {
-                if (tg.equals(kakao[tgIdx]))
+                if (tg.equals(kakao[tgIdx])) {
                     tgIdx++;
-                temp[i] = kakao[tgIdx];
-                tgIdx++;
+                    flag = true;
+                }
+                temp[i] = kakao[tgIdx++];
             }
-            kakao = temp;
-            temp = null;
+            if (flag) {
+                kakao = temp;
+                temp = null;
+            }
+            else
+                System.out.println("잘못된 입력입니다.");
         }
         sc.close();
         System.out.println("모두 삭제되었습니다.");

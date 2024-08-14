@@ -29,7 +29,7 @@ public class ArrQuiz01 {
             String input = sc.next();
             if (input.equals("그만")) {
                 System.out.println("종료합니다.");
-                System.out.println("--- 현재리스트 ---");
+                System.out.println("--- 결과리스트 ---");
                 System.out.println(Arrays.toString(foods));
                 break;
             }
@@ -41,5 +41,6 @@ public class ArrQuiz01 {
             foods = temp;
             temp =null;
         }
+        sc.close();
     }
 }

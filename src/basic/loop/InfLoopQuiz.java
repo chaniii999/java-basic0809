@@ -1,5 +1,6 @@
 package basic.loop;
 
+import java.nio.charset.CoderResult;
 import java.util.Scanner;
 
 public class InfLoopQuiz {
@@ -15,11 +16,23 @@ public class InfLoopQuiz {
         int cor = 0;
         int wro = 0;
         while (true) {
-            int rn1 = (int)(Math.random() * 99) + 1;
-            int rn2 = (int)(Math.random() * 99) + 1;
-            System.out.printf("%d + %d = ?",rn1,rn2);
+            int rn1 = (int)(Math.random() * 100) + 1;
+            int rn2 = (int)(Math.random() * 100) + 1;
+            int oper = (int) (Math.random() * 2); /// 0 ~ 1
+
+            int correct;
+            if (oper == 0) {
+                correct = rn1 + rn2;
+                System.out.printf("%d + %d = ",rn1,rn2);
+
+            }
+            else {
+                correct = rn1 - rn2;
+                System.out.printf("%d - %d = ",rn1,rn2);
+            }
+
             int ans = sc.nextInt();
-            if (ans == rn1 + rn2) {
+            if (ans == correct) {
                 System.out.println("정답");
                 cor++;
             }
