@@ -1,6 +1,4 @@
-package etc.io;
-
-import com.sun.source.tree.NewArrayTree;
+package etc.io.byteStream;
 
 import java.io.FileOutputStream;
 

@@ -1,4 +1,4 @@
-package etc.io;
+package etc.io.byteStream;
 
 import java.io.File;
 import java.io.IOException;

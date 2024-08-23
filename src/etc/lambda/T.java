@@ -1,6 +1,6 @@
 package etc.lambda;
 
-public enum Color {
+public enum T {
     RED, GREEN, YELLOW
 
 }

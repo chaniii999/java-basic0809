@@ -1,4 +1,4 @@
-package oop;
+package oop.inter;
 
 public interface Inter {
     int num = 5;
