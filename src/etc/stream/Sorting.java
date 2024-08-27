@@ -8,11 +8,11 @@ import static etc.stream.Menu.menuList;
 public class Sorting {
     public static void main(String[] args) {
 
-        // 육류 중 칼로리가 낮은순 정령
+        // 육류 중 칼로리가 높은순 정령
         menuList.stream()
                 .filter(dish -> dish.getType() == Dish.Type.MEAT)
-                .sorted(Comparator.comparing(Dish::getCalories))
-                .toList()
+                .sorted(Comparator.comparing(Dish::getCalories).reversed()) // 객체참조식으로해야 reverse 작성가능.
+                .toList()                                                   // (Dish d) -> 으로해도 가능
                 .forEach(System.out::println);
         // 모든 메뉴 이름 내림차 정렬
 
